@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo mv ./ams.teknex.com.conf /etc/apache2/sites-available/ams.teknex.com.conf
-sudo a2ensite ams.teknex.com.conf
+sudo mv ./kumar.kumarsinfra.com.conf /etc/apache2/sites-available/kumar.kumarsinfra.com.conf
+sudo a2ensite kumar.kumarsinfra.com.conf
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 sudo a2dissite 000-default.conf
