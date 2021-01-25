@@ -1,0 +1,112 @@
+---
+- name: Transfer and execute a script.
+  hosts: servers
+  remote_user: kumar
+  tasks:
+  - name: Copy file with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/kumar.kumarsinfra.com.conf
+      dest: /home/kumar/kumar.kumarsinfra.com.conf
+      owner: kumar
+      group: kumar
+      mode: '0644'
+  - name: Copy script-1 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/1-basic-install.sh
+      dest: /home/kumar/1-basic-install.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-1
+    command: bash /home/kumar/1-basic-install.sh
+
+  - name: Copy script-2 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/2-mysql-dependency.sh
+      dest: /home/kumar/2-mysql-dependency.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-2
+    command: bash /home/kumar/2-mysql-dependency.sh
+
+  - name: Copy script-3 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/3-mysql-secure-install.sh
+      dest: /home/kumar/3-mysql-secure-install.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-3
+    command: bash /home/kumar/3-mysql-secure-install.sh
+
+  - name: Copy script-4 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/4-post-mysql-secure-installation.sh
+      dest: /home/kumar/4-post-mysql-secure-installation.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-4
+    command: bash /home/kumar/4-post-mysql-secure-installation.sh
+
+  - name: Copy script-5 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/5-updated-db.sh
+      dest: /home/kumar/5-updated-db.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-5
+    command: bash /home/kumar/5-updated-db.sh
+
+  - name: Copy script-6 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/6-git-clone.sh
+      dest: /home/kumar/6-git-clone.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-6
+    command: bash /home/kumar/6-git-clone.sh
+
+  - name: Copy script-7 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/7-update-env.sh
+      dest: /home/kumar/7-update-env.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-7
+    command: bash /home/kumar/7-update-env.sh
+
+  - name: Copy script-8 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/8-post-env.sh
+      dest: /home/kumar/8-post-env.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-8
+    command: bash /home/kumar/8-post-env.sh
+
+  - name: Copy script-9 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/9-composer.sh
+      dest: /home/kumar/9-composer.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-9
+    command: bash /home/kumar/9-composer.sh
+
+  - name: Copy script-10 with owner and permissions
+    ansible.builtin.copy:
+      src: /home/kumar/snipe-it-automation-using-ansible/10-preflight.sh
+      dest: /home/kumar/10-preflight.sh
+      owner: kumar
+      group: kumar
+      mode: '0775'
+  - name: Execute the script-10
+    command: bash /home/kumar/10-preflight.sh
+
